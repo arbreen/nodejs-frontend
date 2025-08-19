@@ -38,6 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
+      name: something
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -65,4 +66,5 @@ jobs:
       - name: logout
         run: |
           az logout
+
 
